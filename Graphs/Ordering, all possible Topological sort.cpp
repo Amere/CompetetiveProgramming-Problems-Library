@@ -56,7 +56,6 @@ int main() {
         while(ss >> a)
             elements.push_back(a);
         sort(elements.begin(), elements.end());
-
         getline(cin, line);
         ss.clear();
         ss.str(line);
