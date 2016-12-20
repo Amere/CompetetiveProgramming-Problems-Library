@@ -2,6 +2,11 @@
 #include <queue>
 #include <deque>
 
+/*
+auto cmp = [](state left, state right) { return left.rem<right.rem ;};
+   priority_queue<state,vector<state>,decltype(cmp)> q(cmp);
+   */
+
 using namespace std;
 
 struct monotone_queue{

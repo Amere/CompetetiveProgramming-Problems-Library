@@ -92,8 +92,6 @@ int main() {
         memset(dp, -1, sizeof(dp));
         dp[0] = 1;
         cout<<solve(1)<<endl;
-
     }
-
     return 0;
 }

@@ -21,9 +21,6 @@ struct Node{
     char value;
 };
 
-
-
-
 struct SegmentTree{
     int N;
     vector<int> array;
@@ -84,6 +81,17 @@ struct SegmentTree{
         }
 
     }
+    void fullPropagate(int node,int b,int e){
+    if(b==e) return;
+    else{
+        int mid = (b + e) >> 1;
+        propagate(node, b, e);
+        fullPropagate(node<<1, b, mid);
+        fullPropagate((node<<1) + 1, mid + 1, e);
+        sTree[node] = combine(sTree[node<<1], sTree[(node<<1) + 1]);
+    }
+
+  }
     void propagate(int node, int b, int e)
     {
         int mid = (b+e)/2;
@@ -119,7 +127,7 @@ int main(){
     int N = 1; while(N < n) N <<= 1;
     vector<int> v(N+1);
     SegmentTree S(v);
-    S.build(1, 1, (int)v.size()-1);
+    S.build(1, 1, N);
 
     return 0;
 }

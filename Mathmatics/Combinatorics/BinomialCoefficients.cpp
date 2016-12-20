@@ -19,7 +19,7 @@ Summation of squares over r = (2n)Cn
 
 //	 * 1. Pascal's Rule: recursive | Top-down approach
 
-ll [10000][10000] comb;			//may need BigInteger, if the numbers are large, use a treemap
+ll comb[10000][10000] ;			//may need BigInteger, if the numbers are large, use a treemap
 
 	ll nCr1(int n , int k)
 	{

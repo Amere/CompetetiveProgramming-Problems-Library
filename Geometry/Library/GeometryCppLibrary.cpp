@@ -487,7 +487,7 @@ vector<point> cutPolygon(point a, point b, const vector<point> &Q) {
   if (!P.empty() && !(P.back() == P.front()))
     P.push_back(P.front());        // make P's first point = P's last point
   return P; }
-  
+
   bool isInside(Point polygon[], int n, Point p)
 {
     // There must be at least 3 vertices in polygon[]

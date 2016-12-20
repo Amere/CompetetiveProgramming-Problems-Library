@@ -1,5 +1,3 @@
 *****InversionIndex : it's a variant for each array describes how the array is sorted, it can be computed as the
   sum of (how many elements are greated than each index in the array coming after it) , can be computed in nlog(n)
   using mergeSort and also o(n*n) from bubble sort
-
-*****Before using sort we should shuffle first
